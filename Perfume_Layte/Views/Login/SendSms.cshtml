@@ -1,0 +1,58 @@
+﻿
+@model string;
+@{
+    ViewData["Title"] = "فعال سازی";
+}
+<nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">خانه</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+        </ol>
+    </div>
+</nav>
+
+<div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17" style="background-image: url('~/assets/Public/Mens-Cologne-23-perfume.jpg')">
+    <div class="container">
+        <div class="form-box">
+            <div class="form-tab">
+                <ul class="nav nav-pills nav-fill" role="tablist">
+                    <li class="nav-item">
+                        @ViewData["Title"]
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="registers-2" role="tabpanel" aria-labelledby="register-tab-2">
+                        @if (TempData["MessageRegister"] != null)
+                        {
+                            <div class="alert alert-success text-center">@TempData["MessageRegister"].ToString()</div>
+                        }
+                        <form asp-controller="Login" asp-action="SendSms" method="post">
+                            @if (TempData["MessageSucess"] != null)
+                            {
+                                <div class="alert alert-success text-center">حساب کاربری فعال شد</div>
+                                <script>
+                                    setInterval(()=>{
+                                        window.location.href = "/";
+                                    },1500);
+                                </script>
+                            }
+                            <input type="text" value="@Model" hidden name="Mobile"/>
+                            <div class="form-group">
+                                <label for="register-password-2">کد فعال سازی</label>
+                                <input  type="text" class="form-control" id="register-password-2" name="CodeActive">
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-outline-primary-2">
+                                    <span>ثبت </span>
+                                    <i class="icon-long-arrow-left"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewData["Title"] = "محصول جدید";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css' rel='stylesheet' type='text/css' />
+
+<div class="container py-5">
+    <form method="post" asp-area="Admin" asp-controller="Home" asp-action="NewProduct" enctype="multipart/form-data">
+        <div class="row">
+            <!-- Product Images -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img id="imgTagsChange" src="~/Logo.png" class="card-img-top" alt="Product Image">
+                    <input id="ImgInpute" type="file" name="fileMain" />
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-3">
+                                <input name="Img" type="file" />
+
+                                <input name="Img" type="file" />
+
+                                <input name="Img" type="file" />
+
+                                <input name="Img" type="file" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h1 class="h2 mb-3">نام محصول : <input type="text" name="Name" /></h1>
+                <h1 class="h2 mb-3">برند محصول : <input type="text" name="Brand" /></h1>
+                
+                <div class="mb-3">
+                    <span class="h4 me-2">اف خور:</span>
+                    <input type="checkbox" name="isTahkfif" />
+
+
+                    <span class="h4 me-2">اف خور قیمت:</span>
+                    <input type="text" name="PriceNew" />
+                    
+
+                </div>
+
+                @*  <div class="mb-3">
+                <div class="d-flex align-items-center">
+                    <div class="text-warning me-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-muted">(128 reviews)</span>
+                </div>
+            </div> *@
+
+                <span class="h4 me-2">قیمت:<input name="Price" type="text" /></span>
+
+
+
+                <span>نمایش در صفحه </span>
+                <input type="checkbox" name="isVisite" />
+
+                <!-- Color Selection -->
+                <!-- Quantity -->
+                <div class="mb-4">
+                    <div class="d-flex align-items-center">
+                        <label class="me-2">دسته</label>
+                        <select id="ddlFruits" name="categuryID" asp-items="@ViewBag.ListCategury">
+                            <option value="0">انتخاب دسته</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <!-- Additional Info -->
+                <div class="mt-4">
+                  <p>توضیحات</p>
+                    <textarea id="text-editor" name="Text" rows="50" cols="50"></textarea>
+                </div>
+
+                <br/>
+                <br />  <br />  <br />
+
+                <p>ویژگی ها</p>
+                <textarea id="feature-editor" name="Feature" rows="50" cols="50"></textarea>
+            </div>
+
+
+
+            
+                   
+            </div>
+
+        <button id="btnAddProduct" type="submit"></button>
+    </form>
+</div>
+
+
+@section Script{
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
+    <script>
+        new FroalaEditor('textarea#text-editor');
+        var editor = new FroalaEditor('#feature-editor');
+    </script>
+    <script>
+         
+
+
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#imgTagsChange').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#ImgInpute").change(function() {
+            readURL(this);
+        });
+    </script>
+}

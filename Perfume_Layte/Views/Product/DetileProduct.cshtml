@@ -1,0 +1,242 @@
+﻿@using PerfumeLayte.Application.Services.Product.Querises.GetListProduct
+@using PerfumeLayte.Application.Services.Product.Querises.GetProductByID;
+@model GetProductByID;
+@{
+    ViewData["Title"] = Model.Name;
+}
+<main class="main">
+    <input id="Mobile" type="hidden" value="@User.Identity.Name"/>
+    <input id="Product" type="hidden" value="@Model.ID" />
+    <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+        <div class="container d-flex align-items-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                <li class="breadcrumb-item"><a asp-action="Products" asp-controller="Product">محصولات</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ViewData["DetileProductName"]</li>
+            </ol>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="product-details-top">
+                <div class="row">
+                    <div class="col-md-6">
+               
+                        <div class="product-gallery product-gallery-vertical">
+                            <div class="row">
+                                <figure class="product-main-image">
+                                    <img src="/assets/Public/@Model.ScrMain" data-zoom-image="/assets/Public/@Model.ScrMain" alt="تصویر محصول">
+                                    <a href="#" id="btn-product-gallery" class="btn-product-gallery">
+                                        <i class="icon-arrows"></i>
+                                    </a>
+                                </figure>
+
+                                <div id="product-zoom-gallery" class="product-image-gallery">
+                                    @if(Model.src.Any())
+                                    {
+                                        @foreach (var src in Model.src)
+                                        {
+                                            <a href="#" class="product-gallery-item" data-image="/assets/Public/@src" data-zoom-image="/assets/Public/@src">
+                                                    <img src="~/assets/Public/@src" alt="توضیحات تصویر">
+                                                </a>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-details">
+                            <h1 class="product-title">@Model.Name</h1>
+                            <div class="ratings-container">
+                                <div class="ratings">
+                                    <div class="ratings-val" style="width: 80%;"></div>
+                                </div><!-- End .ratings -->
+                                <a class="ratings-text" href="#product-review-link" id="review-link">( 2 نظر
+                                    )</a>
+                            </div><!-- End .rating-container -->
+
+                            <div class="product-price">
+                                @{
+                                    int Price = Convert.ToInt32(Model.Price);
+                                }
+                                @Price.ToString("#,0")
+                            </div><!-- End .product-price -->
+
+                            <div class="product-content">
+                                <p>
+                                    @Model.Brand : برند 
+                                </p>
+                            </div><!-- End .product-content -->
+
+
+
+                            <div class="details-filter-row details-row-size">
+                                <label for="qty">تعداد : </label>
+                                <div class="product-details-quantity">
+                                    <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required="">
+                                    <div class="input-group  input-spinner">
+                                        <div class="input-group-prepend">
+                                            <button style="min-width: 26px" class="btn btn-decrement btn-spinner" type="button">
+                                                
+                                                </button>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <button style="min-width: 26px" class="btn btn-increment btn-spinner" type="button">
+                       
+                                                        </button>
+                                                        </div>
+                                                        </div>
+                                </div><!-- End .product-details-quantity -->
+                            </div><!-- End .details-filter-row -->
+
+                            <div class="product-details-action">
+                                <a style="cursor:pointer" id="BtnCart" class="btn-product btn-cart"><span>افزودن به سبد خرید</span></a>
+
+                                <div class="details-action-wrapper">
+                                    
+                                    <a asp-controller="Product" asp-action="AddLike" asp-route-ProductID="@Model.ID" asp-route-Mobile="@User.Identity.Name" class="btn-product btn-wishlist" title="لیست علاقه مندی">
+                                        <span>
+                                            افزودن
+                                            به
+                                            علاقه مندی</span></a>
+                                </div>
+                            </div>
+
+                            <div class="product-details-footer">
+                                <div class="product-cat text-center">
+                                    <span>دسته بندی : </span>
+                                    <a href="#">@Model.categury</a>
+                                </div>
+
+                                <div class="social-icons social-icons-sm">
+                                    <span class="social-label">اشتراک گذاری : </span>
+                                    <a href="#" class="social-icon" title="فیسبوک" target="_blank"><i class="icon-facebook-f"></i></a>
+                                    <a href="#" class="social-icon" title="توییتر" target="_blank"><i class="icon-twitter"></i></a>
+                                    <a href="#" class="social-icon" title="اینستاگرام" target="_blank"><i class="icon-instagram"></i></a>
+                                    <a href="#" class="social-icon" title="پینترست" target="_blank"><i class="icon-pinterest"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-details-tab">
+                <ul class="nav nav-pills justify-content-center" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="product-desc-link" data-toggle="tab" href="#product-desc-tab" role="tab" aria-controls="product-desc-tab" aria-selected="true">توضیحات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="product-info-link" data-toggle="tab" href="#product-info-tab" role="tab" aria-controls="product-info-tab" aria-selected="false">اطلاعات بیشتر</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="product-shipping-link" data-toggle="tab" href="#product-shipping-tab" role="tab" aria-controls="product-shipping-tab" aria-selected="false">ارسال و بازگشت</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">نظرات (2)</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="product-desc-tab" role="tabpanel" aria-labelledby="product-desc-link">
+                        <div class="product-desc-content">
+                            <h3>اطلاعات محصول</h3>
+                            @Html.Raw(Model.text);
+                        </div><!-- End .product-desc-content -->
+                    </div><!-- .End .tab-pane -->
+                    <div class="tab-pane fade" id="product-info-tab" role="tabpanel" aria-labelledby="product-info-link">
+                        <div class="product-desc-content">
+                            <div class="product-desc-content">
+                                <h3>ویژگی محصول</h3>
+                                @Html.Raw(Model.feature);
+                            </div><!-- End .product-desc-content -->
+                        </div><!-- End .product-desc-content -->
+                    </div><!-- .End .tab-pane -->
+                    <div class="tab-pane fade" id="product-shipping-tab" role="tabpanel" aria-labelledby="product-shipping-link">
+                        <div class="product-desc-content">
+                            <h3>ارسال و بازگشت</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید
+                                سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن
+                                ساختگی با تولید سادگی نامفهوم<br>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید
+                                سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن
+                                ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product-review-tab" role="tabpanel" aria-labelledby="product-review-link">
+                        @if(Model.CommentsDto.Any())
+                        {
+                            @foreach(var comments in Model.CommentsDto)
+                            {
+                                                        <div class="reviews">
+                                    <h3>@comments.UserName</h3>
+                            <div class="review">
+                                <div class="row no-gutters">
+                                    <div class="col-auto">
+                                        <h4><a href="#"></a></h4>
+                                        <div class="ratings-container">
+                                            <div class="ratings">
+                                                <div class="ratings-val" style="width: 80%;">@comments.Stars</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <h4>@comments.Title</h4>
+
+                                        <div class="review-content">
+                                            <p>
+                                              @comments.MainText
+                                            </p>
+                                        </div>
+
+                                        <div class="review-action">
+                                            <a href="#"><i class="icon-thumbs-up"></i>مثبت (2)</a>
+                                            <a href="#"><i class="icon-thumbs-down"></i>منفی (0)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                            }
+                        }
+                    </div>
+                        </div>
+                    </div>
+
+                    <h2 class="title text-center mb-4">محصولاتی که شاید بپسندید</h2>
+
+                @await Component.InvokeAsync("TabBarProduct", new { Cat = Model.categury })
+            </div><!-- End .page-content -->
+        </main>
+        @section Scripts{
+            <script>
+                document.getElementById("BtnCart").addEventListener("click", function () {
+            const mobile = document.getElementById("Mobile").value;
+            const productID = document.getElementById("Product").value;
+
+            var CountProduct = document.getElementById("qty").value;
+
+            if (!mobile || !productID) {
+                alert("مقادیر را وارد کنید.");
+                return;
+            }
+
+            const xhr = new XMLHttpRequest();
+            const url = `https://localhost:44329/Product/AddToCart?Mobile=${encodeURIComponent(mobile)}&ProductID=${encodeURIComponent(productID)}&CountProduct=${CountProduct}`;
+            xhr.open("GET", url, true);
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.location.href = `https://localhost:44329/Product/CartUserShowActive?Mobile=${mobile}`;
+
+                }
+            };
+
+            xhr.send();
+        });
+
+            </script>
+        }

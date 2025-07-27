@@ -1,0 +1,14 @@
+﻿@using PerfumeLayte.Application.Services.Product.Commands.AddNewCategury;
+@model CateguryAddDto;
+@{
+    ViewData["Title"] = "افزودن گروه ";
+}
+<form asp-action="AddCategury" asp-controller="Categury" method="post" class="p-5">
+    <input name="ID" value="@ViewData["ParentCategury"]" hidden class="form-control" />
+    @ViewData["ParentCategury"]
+    <input asp-for="@Model.CateguryName" type="text" class="form-control" />
+
+
+    <button type="submit">ذخیره</button>
+
+</form>

@@ -1,0 +1,126 @@
+﻿@using PerfumeLayte.Application.Services.Product.Querises.GetListProduct;
+@model ReslutGetListProductDto;
+@{
+    ViewData["Title"] = "لیست محصولات";
+}
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <div class="container py-5">
+            <!-- Top Bar -->
+            <div class="row g-4">
+                <!-- Filters Sidebar -->
+
+                <!-- Product Grid -->
+                <div class="col-lg-12">
+                    
+                    <a></a>
+                    @if(Model.GetListProduct != null)
+                    {
+                        <a asp-controller="Home" asp-action="NewProduct">افزودن</a>
+                        <div class="row g-4">
+                            <!-- Product Card 1 -->
+                            @foreach (var Pro in Model.GetListProduct)
+                            {
+                                <div class="col-md-3">
+                                    <div class="product-card shadow-sm">
+                                        <div class="position-relative">
+                                            <img src="~/assets/public/@Pro.ScrMain" class="product-image w-100" alt="Product">
+                                            <span class="discount-badge">-20%</span>
+                                            <button class="wishlist-btn btn btn-warning">
+                                                <i class="bi bi-heart"><a asp-area="Admin" asp-controller="Home" asp-action="EditProduct" asp-route-ProductID="@Pro.ProductID">ویرایش</a></i>
+                                            </button>
+                                        </div>
+                                        <div class="p-3">
+                                            <span class="category-badge mb-2 d-inline-block">Electronics</span>
+                                            <h6 class="mb-1">Wireless Headphones</h6>
+                                            <div class="rating-stars mb-2">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                                <span class="text-muted ms-2">(4.5)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price">$129.99</span>
+                                                <button class="btn cart-btn">
+                                                    <i class="bi bi-cart-plus"><a asp-area="Admin" asp-controller="Home" asp-action="PruductById" asp-route-ProductID="@Pro.ProductID">نمایش</a></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <div class="row">
+                                <div class="col-12 col-md-12">
+                                    <ul class="col-md-3 text-center" aria-label="...">
+                                        @*  @if (Model.RowCount > 1)
+                                    {
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                    }
+                                    @for (var i = 1; i < Model.RowCount - 1; i++)
+                                    {
+
+                                        <li class="page-item"><a class="page-link" href="#">@i</a></li>
+
+                                    }
+                                    @if (Model.RowCount < 1)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    } *@
+
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <!-- More product cards can be added here -->
+
+                        </div>
+                    }
+                    else
+                    {
+                        <a asp-controller="Home" asp-action="NewProduct">افزودن</a>
+                    }
+
+
+                </div>
+            </div>
+            @if(Model.RowCount != 0)
+            {
+                <form method="get" asp-area="Admin" asp-action="ListProduct">
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-lg">
+                            @for (var i = 1; i <= Model.RowCount; i++)
+                            {
+                                <li class="page-item" aria-current="page">
+                                    <span class="page-link"><a href="/Admin/Home/ListProduct?Page=@i">@i</a></span>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+               </form>
+           }
+        </div>
+       
+    </div>
+    <!-- End of Main Content -->
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Your Website 2021</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+</div>
+<!-- End of Content Wrapper -->

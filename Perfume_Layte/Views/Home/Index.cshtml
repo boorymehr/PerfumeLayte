@@ -1,0 +1,603 @@
+﻿
+@{
+    ViewData["Title"] = "صفحه اصلی";
+    List<int> catid = (List<int>)ViewData["CateguryParentNulls"];
+    Tuple<int, int> CatID = Tuple.Create(catid[0], catid[1]);
+}
+
+<main class="main">
+    <div class="intro-section bg-lighter pt-5 pb-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="intro-slider-container slider-container-ratio slider-container-1 mb-2 mb-lg-0">
+                        <div class="intro-slider intro-slider-1 owl-carousel owl-simple owl-light owl-nav-inside owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                            &quot;nav&quot;: false,
+                                            &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                                &quot;768&quot;: {
+                                                    &quot;nav&quot;: true
+                                                }
+                                            }
+                                        }">
+                            <!-- End .intro-slide -->
+                            <!-- End .intro-slide -->
+                            <!-- End .intro-slide -->
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage" style="transform: translate3d(2316px, 0px, 0px); transition: 0.4s; width: 5404px;">
+                                    <div class="owl-item cloned" style="width: 772px;">
+                                        <div class="intro-slide">
+                                            <figure class="slide-image">
+                                                <picture>
+                                                    <source media="(max-width: 480px)" srcset="/assets/Public/bann.jpg">
+                                                    <img src="/assets/Public/bann.jpg" alt="Image Desc">
+                                                </picture>
+                                            </figure><!-- End .slide-image -->
+
+                                            <div class="intro-content">
+                                                <h3 class="intro-subtitle">جدید ترین ادکلن ها</h3>
+                                                <!-- End .h3 intro-subtitle -->
+                                                <h1 class="intro-title">پر فروش ترین</h1><!-- End .intro-title -->
+
+                                                <a asp-controller="Product" asp-action="Products" class="btn btn-outline-white">
+                                                    <i class="icon-long-arrow-left"></i>
+                                                    <span>خرید</span>
+                                                </a>
+                                            </div><!-- End .intro-content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="icon-angle-right"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div>
+                        </div><!-- End .intro-slider owl-carousel owl-simple -->
+
+                        <span class="slider-loader"></span><!-- End .slider-loader -->
+                    </div><!-- End .intro-slider-container -->
+                </div><!-- End .col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="intro-banners">
+                        <div class="row row-sm">
+                            <div class="col-md-6 col-lg-12">
+                                <div class="banner banner-display">
+                                    <a asp-controller="Product" asp-action="Products">
+                                        <img style="height:214px;" src="/assets/Public/Mens-Cologne-23-perfume.jpg" alt="Banner">
+                                    </a>
+
+                                    <div class="banner-content">
+                                        <h4 class="banner-subtitle text-darkwhite">
+                                            <a asp-controller="Product" asp-action="Products" class="btn btn-outline-white">ادکلن های مردانه</a>
+                                        </h4><!-- End .banner-subtitle -->
+                                        <a asp-controller="Product" asp-action="Products" class="btn btn-outline-white banner-link">خرید<i class="icon-long-arrow-left"></i></a>
+                                    </div><!-- End .banner-content -->
+                                </div><!-- End .banner -->
+                            </div><!-- End .col-md-6 col-lg-12 -->
+
+                            <div class="col-md-6 col-lg-12">
+                                <div class="banner banner-display mb-0">
+                                    <a asp-controller="Product" asp-action="Products">
+                                        <img style="height:214px;" src="/assets/Public/0000983.jpeg" alt="Banner">
+                                    </a>
+
+                                    <div class="banner-content">
+                                        <h4 class="banner-subtitle text-darkwhite"><a href="#">ادکلن مردانه</a></h4>
+                                        <!-- End .banner-subtitle -->
+                                        <h3 class="banner-title text-white">
+                                            <a asp-controller="Product" asp-action="Products">
+                                                مجمعه بهترین
+                                                <br> عطر ها
+                                            </a>
+                                        </h3><!-- End .banner-title -->
+                                        <a asp-controller="Product" asp-action="Products" class="btn btn-outline-white banner-link">خرید<i class="icon-long-arrow-left"></i></a>
+                                    </div><!-- End .banner-content -->
+                                </div><!-- End .banner -->
+                            </div><!-- End .col-md-6 col-lg-12 -->
+                        </div><!-- End .row row-sm -->
+                    </div><!-- End .intro-banners -->
+                </div><!-- End .col-lg-4 -->
+            </div><!-- End .row -->
+
+            <div class="mb-6"></div><!-- End .mb-6 -->
+
+            <div class="owl-carousel owl-simple owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                &quot;nav&quot;: false,
+                                &quot;dots&quot;: false,
+                                &quot;margin&quot;: 30,
+                                &quot;loop&quot;: false,
+                                &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                    &quot;0&quot;: {
+                                        &quot;items&quot;:2
+                                    },
+                                    &quot;420&quot;: {
+                                        &quot;items&quot;:3
+                                    },
+                                    &quot;600&quot;: {
+                                        &quot;items&quot;:4
+                                    },
+                                    &quot;900&quot;: {
+                                        &quot;items&quot;:5
+                                    },
+                                    &quot;1024&quot;: {
+                                        &quot;items&quot;:6
+                                    }
+                                }
+                            }">
+
+
+
+
+
+
+
+
+
+
+
+                <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+            </div><!-- End .owl-carousel -->
+        </div><!-- End .container -->
+    </div><!-- End .bg-lighter -->
+
+    <div class="mb-6"></div><!-- End .mb-6 -->
+
+    <div class="container">
+        <div class="heading heading-center mb-3">
+            <h2 class="title-lg">محصولات برتر</h2><!-- End .title -->
+
+            <ul class="nav nav-pills justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="trendy-all-link" data-toggle="tab" href="#trendy-all-tab" role="tab" aria-controls="trendy-all-tab" aria-selected="true">همه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="trendy-fur-link" data-toggle="tab" href="#trendy-fur-tab" role="tab" aria-controls="trendy-fur-tab" aria-selected="false">مردانه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="trendy-decor-link" data-toggle="tab" href="#trendy-decor-tab" role="tab" aria-controls="trendy-decor-tab" aria-selected="false">زنانه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="trendy-light-link" data-toggle="tab" href="#trendy-light-tab" role="tab" aria-controls="trendy-light-tab" aria-selected="false">تازه ترین ها</a>
+                </li>
+            </ul>
+        </div><!-- End .heading -->
+
+        <div class="tab-content tab-content-carousel">
+            <div class="tab-pane p-0 fade show active" id="trendy-all-tab" role="tabpanel" aria-labelledby="trendy-all-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                    &quot;nav&quot;: false,
+                                    &quot;dots&quot;: true,
+                                    &quot;margin&quot;: 20,
+                                    &quot;loop&quot;: false,
+                                    &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                        &quot;0&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;480&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;768&quot;: {
+                                            &quot;items&quot;:3
+                                        },
+                                        &quot;992&quot;: {
+                                            &quot;items&quot;:4
+                                        },
+                                        &quot;1200&quot;: {
+                                            &quot;items&quot;:4,
+                                            &quot;nav&quot;: true,
+                                            &quot;dots&quot;: false
+                                        }
+                                    }
+                                }">
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 746px;">
+                            <cache vary-by-user="true" expires-after="@TimeSpan.FromMinutes(60)">
+                            @await Component.InvokeAsync("TabBarProduct", new { Cat = "همه" });
+                            </cache>
+                        </div>
+                    </div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+                </div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="trendy-fur-tab" role="tabpanel" aria-labelledby="trendy-fur-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                    &quot;nav&quot;: false,
+                                    &quot;dots&quot;: true,
+                                    &quot;margin&quot;: 20,
+                                    &quot;loop&quot;: false,
+                                    &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                        &quot;0&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;480&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;768&quot;: {
+                                            &quot;items&quot;:3
+                                        },
+                                        &quot;992&quot;: {
+                                            &quot;items&quot;:4
+                                        },
+                                        &quot;1200&quot;: {
+                                            &quot;items&quot;:4,
+                                            &quot;nav&quot;: true,
+                                            &quot;dots&quot;: false
+                                        }
+                                    }
+                                }">
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 746px;">
+                            <cache vary-by-user="true" expires-after="@TimeSpan.FromMinutes(60)">
+                             @await Component.InvokeAsync("TabBarProduct", new { Cat = "مردانه" });
+                             </cache>
+                        </div>
+                    </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+                </div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="trendy-decor-tab" role="tabpanel" aria-labelledby="trendy-decor-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                    &quot;nav&quot;: false,
+                                    &quot;dots&quot;: true,
+                                    &quot;margin&quot;: 20,
+                                    &quot;loop&quot;: false,
+                                    &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                        &quot;0&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;480&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;768&quot;: {
+                                            &quot;items&quot;:3
+                                        },
+                                        &quot;992&quot;: {
+                                            &quot;items&quot;:4
+                                        },
+                                        &quot;1200&quot;: {
+                                            &quot;items&quot;:4,
+                                            &quot;nav&quot;: true,
+                                            &quot;dots&quot;: false
+                                        }
+                                    }
+                                }">
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 746px;">
+                            <cache vary-by-user="true" expires-after="@TimeSpan.FromMinutes(60)">
+                            @await Component.InvokeAsync("TabBarProduct", new { Cat = "زنانه" });
+                           </cache>
+                        </div>
+                    </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+                </div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="trendy-light-tab" role="tabpanel" aria-labelledby="trendy-light-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                    &quot;nav&quot;: false,
+                                    &quot;dots&quot;: true,
+                                    &quot;margin&quot;: 20,
+                                    &quot;loop&quot;: false,
+                                    &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                        &quot;0&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;480&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;768&quot;: {
+                                            &quot;items&quot;:3
+                                        },
+                                        &quot;992&quot;: {
+                                            &quot;items&quot;:4
+                                        },
+                                        &quot;1200&quot;: {
+                                            &quot;items&quot;:4,
+                                            &quot;nav&quot;: true,
+                                            &quot;dots&quot;: false
+                                        }
+                                    }
+                                }">
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 746px;">
+                            <cache vary-by-user="true" expires-after="@TimeSpan.FromMinutes(60)">
+                              @await Component.InvokeAsync("TabBarProduct", new { Cat = "تازه ترین ها" });
+                            </cache>
+                        </div>
+                    </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+                </div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+        </div><!-- End .tab-content -->
+    </div><!-- End .container -->
+
+    <div class="container categories pt-6">
+        <h2 class="title-lg text-center mb-4">دسته بندی ها</h2><!-- End .title-lg text-center -->
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="banner banner-display banner-link-anim">
+                    <a asp-controller="Product" asp-action="Products" asp-route-CatID="@CatID.Item1">
+                        <img src="/assets/Public/womenn.jpg" alt="بنر" style="height:465px">
+                    </a>
+
+                    <div class="banner-content banner-content-center">
+                        <h3 class="banner-title text-white text-center"><a asp-controller="Product" asp-action="Products" asp-route-CatID="@CatID.Item1">زنانه</a></h3>
+                        <!-- End .banner-title -->
+                        <a asp-controller="Product" asp-action="Products" asp-route-CatID="@CatID.Item1" class="btn btn-outline-white banner-link">خرید<i class="icon-long-arrow-left"></i></a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-sm-6 col-lg-3 -->
+            <div class="col-12 col-lg-6">
+                <div class="banner banner-display banner-link-anim">
+                    <a asp-controller="Product" asp-action="Products" asp-route-CatID="@CatID.Item2">
+                        <img src="/assets/Public/men.jpg" alt="بنر" style="height:465px">
+                    </a>
+
+                    <div class="banner-content banner-content-center">
+                        <h3 class="banner-title text-white text-center"><a asp-controller="Product" asp-action="Products" asp-route-CatID="@CatID.Item2">مردانه</a></h3>
+                        <!-- End .banner-title -->
+                        <a asp-controller="Product" asp-action="Products" asp-route-CatID="@CatID.Item2" class="btn btn-outline-white banner-link">خرید<i class="icon-long-arrow-left"></i></a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-sm-6 col-lg-3 -->
+
+        </div><!-- End .row -->
+    </div><!-- End .container -->
+
+    <div class="mb-5"></div><!-- End .mb-6 -->
+
+
+    <div class="container">
+        <div class="heading heading-center mb-3">
+            <h2 class="title-lg">محصولات برتر</h2><!-- End .title -->
+
+            <ul class="nav nav-pills justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="trendy-all-link1" data-toggle="tab" href="#trendy-all-tab1" role="tab" aria-controls="trendy-all-tab" aria-selected="true">همه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="trendy-fur-link2" data-toggle="tab" href="#trendy-fur-tab2" role="tab" aria-controls="trendy-fur-tab" aria-selected="false">مردانه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="trendy-decor-link3" data-toggle="tab" href="#trendy-decor-tab3" role="tab" aria-controls="trendy-decor-tab" aria-selected="false">زنانه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="trendy-light-link4" data-toggle="tab" href="#trendy-light-tab4" role="tab" aria-controls="trendy-light-tab" aria-selected="false">تازه ترین ها</a>
+                </li>
+            </ul>
+        </div><!-- End .heading -->
+
+        <div class="tab-content tab-content-carousel">
+            <div class="tab-pane p-0 fade show active" id="trendy-all-tab1" role="tabpanel" aria-labelledby="trendy-all-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                    &quot;nav&quot;: false,
+                                    &quot;dots&quot;: true,
+                                    &quot;margin&quot;: 20,
+                                    &quot;loop&quot;: false,
+                                    &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                        &quot;0&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;480&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;768&quot;: {
+                                            &quot;items&quot;:3
+                                        },
+                                        &quot;992&quot;: {
+                                            &quot;items&quot;:4
+                                        },
+                                        &quot;1200&quot;: {
+                                            &quot;items&quot;:4,
+                                            &quot;nav&quot;: true,
+                                            &quot;dots&quot;: false
+                                        }
+                                    }
+                                }">
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 746px;">
+
+                            @await Component.InvokeAsync("TabBarProduct", new { Cat = "همه" });
+
+                        </div>
+                    </div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+                </div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="trendy-fur-tab2" role="tabpanel" aria-labelledby="trendy-fur-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                    &quot;nav&quot;: false,
+                                    &quot;dots&quot;: true,
+                                    &quot;margin&quot;: 20,
+                                    &quot;loop&quot;: false,
+                                    &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                        &quot;0&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;480&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;768&quot;: {
+                                            &quot;items&quot;:3
+                                        },
+                                        &quot;992&quot;: {
+                                            &quot;items&quot;:4
+                                        },
+                                        &quot;1200&quot;: {
+                                            &quot;items&quot;:4,
+                                            &quot;nav&quot;: true,
+                                            &quot;dots&quot;: false
+                                        }
+                                    }
+                                }">
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 746px;">
+                            <cache expires-after="@TimeSpan.FromMinutes(60)">
+                                @await Component.InvokeAsync("TabBarProduct", new { Cat = "مردانه" });
+                            </cache>
+                        </div>
+                    </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+                </div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="trendy-decor-tab3" role="tabpanel" aria-labelledby="trendy-decor-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                    &quot;nav&quot;: false,
+                                    &quot;dots&quot;: true,
+                                    &quot;margin&quot;: 20,
+                                    &quot;loop&quot;: false,
+                                    &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                        &quot;0&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;480&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;768&quot;: {
+                                            &quot;items&quot;:3
+                                        },
+                                        &quot;992&quot;: {
+                                            &quot;items&quot;:4
+                                        },
+                                        &quot;1200&quot;: {
+                                            &quot;items&quot;:4,
+                                            &quot;nav&quot;: true,
+                                            &quot;dots&quot;: false
+                                        }
+                                    }
+                                }">
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 746px;">
+                            <cache expires-after="@TimeSpan.FromMinutes(60)">
+                                @await Component.InvokeAsync("TabBarProduct", new { Cat = "زنانه" });
+                            </cache>
+                        </div>
+                    </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+                </div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="trendy-light-tab4" role="tabpanel" aria-labelledby="trendy-light-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                                    &quot;nav&quot;: false,
+                                    &quot;dots&quot;: true,
+                                    &quot;margin&quot;: 20,
+                                    &quot;loop&quot;: false,
+                                    &quot;rtl&quot;: true,
+                                &quot;responsive&quot;: {
+                                        &quot;0&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;480&quot;: {
+                                            &quot;items&quot;:2
+                                        },
+                                        &quot;768&quot;: {
+                                            &quot;items&quot;:3
+                                        },
+                                        &quot;992&quot;: {
+                                            &quot;items&quot;:4
+                                        },
+                                        &quot;1200&quot;: {
+                                            &quot;items&quot;:4,
+                                            &quot;nav&quot;: true,
+                                            &quot;dots&quot;: false
+                                        }
+                                    }
+                                }">
+                    <!-- End .product -->
+                    <!-- End .product -->
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 746px;">
+                            <cache expires-after="@TimeSpan.FromMinutes(60)">
+                                @await Component.InvokeAsync("TabBarProduct", new { Cat = "تازه ترین ها" });
+                            </cache>
+                        </div>
+                    </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+                </div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+        </div><!-- End .tab-content -->
+    </div><!-- End .container -->
+
+    <div class="container">
+        <hr>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-6">
+                <div class="icon-box icon-box-card text-center">
+                    <span class="icon-box-icon">
+                        <i class="icon-rocket"></i>
+                    </span>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title">پرداخت و ارسال</h3><!-- End .icon-box-title -->
+                        <p class="text-center">ارسال رایگان برای سفارشات بالای 50 هزار تومان</p>
+                    </div><!-- End .icon-box-content -->
+                </div><!-- End .icon-box -->
+            </div><!-- End .col-lg-4 col-sm-6 -->
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="icon-box icon-box-card text-center">
+                    <span class="icon-box-icon">
+                        <i class="icon-rotate-left"></i>
+                    </span>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title">بازگرداندن محصول</h3><!-- End .icon-box-title -->
+                        <p class="text-center">ضمانت 100% بازگشت وجه</p>
+                    </div><!-- End .icon-box-content -->
+                </div><!-- End .icon-box -->
+            </div><!-- End .col-lg-4 col-sm-6 -->
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="icon-box icon-box-card text-center">
+                    <span class="icon-box-icon">
+                        <i class="icon-life-ring"></i>
+                    </span>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title">کیفیت پشتیبانی</h3><!-- End .icon-box-title -->
+                        <p class="text-center">پشتیبانی آنلاین 24 ساعته و 7 روز هفته</p>
+                    </div><!-- End .icon-box-content -->
+                </div><!-- End .icon-box -->
+            </div><!-- End .col-lg-4 col-sm-6 -->
+        </div><!-- End .row -->
+
+        <div class="mb-2"></div><!-- End .mb-2 -->
+    </div><!-- End .container -->
+    <div class="cta cta-display bg-image pt-4 pb-4" style="background-image: url(/assets/Public/bg-2.jpg);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-9 col-xl-8">
+                    <div class="row no-gutters flex-column flex-sm-row align-items-sm-center">
+                        <div class="col-md-8">
+                            <h3 class="cta-title text-white text-right">ثبت نام کنید و 10% تخفیف بگیرید</h3>
+                            <!-- End .cta-title -->
+                            <p class="cta-desc text-white">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
+                            <!-- End .cta-desc -->
+                        </div><!-- End .col -->
+
+                        <div class="col-auto d-flex">
+                            <a href="login.html" class="btn btn-outline-white"><span>ثبت نام</span><i class="icon-long-arrow-left"></i></a>
+                        </div><!-- End .col-auto -->
+                    </div><!-- End .row no-gutters -->
+                </div><!-- End .col-md-10 col-lg-9 -->
+            </div><!-- End .row -->
+        </div><!-- End .container -->
+    </div><!-- End .cta -->
+</main>

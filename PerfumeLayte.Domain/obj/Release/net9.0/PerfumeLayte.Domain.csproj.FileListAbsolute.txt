@@ -1,0 +1,14 @@
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\bin\Release\net9.0\PerfumeLayte.Domain.deps.json
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\bin\Release\net9.0\PerfumeLayte.Domain.runtimeconfig.json
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\bin\Release\net9.0\PerfumeLayte.Domain.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\bin\Release\net9.0\PerfumeLayte.Domain.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\PerfumeLayte.Domain.csproj.AssemblyReference.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\PerfumeLayte.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\PerfumeLayte.Domain.AssemblyInfoInputs.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\PerfumeLayte.Domain.AssemblyInfo.cs
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\PerfumeLayte.Domain.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\PerfumeLayte.Domain.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\refint\PerfumeLayte.Domain.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\PerfumeLayte.Domain.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\PerfumeLayte.Domain.genruntimeconfig.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Domain\obj\Release\net9.0\ref\PerfumeLayte.Domain.dll

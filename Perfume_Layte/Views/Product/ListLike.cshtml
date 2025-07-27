@@ -1,0 +1,63 @@
+﻿@using PerfumeLayte.Application.Services.User.Commands.AddToLike
+@model List<LikeDto>;
+@{
+    ViewData["Title"] = "سبد خرید";
+}
+<main class="main">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/l">خانه</a></li>
+                <li class="breadcrumb-item active" aria-current="page">لیست علاقه مندی</li>
+            </ol>
+        </div><!-- End .container -->
+    </nav><!-- End .breadcrumb-nav -->
+
+    <div class="page-content">
+        <div class="container">
+            <table class="table table-wishlist table-mobile">
+                <thead>
+                    <tr>
+                        <th>محصول</th>
+                        <th>قیمت</th>
+                        <th>وضعیت محصول</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model != null)
+                    {
+                        @foreach(var item in Model)
+                        {
+                            <tr>
+                                <td class="product-col">
+                                    <div class="product">
+                                        <figure class="product-media">
+                                            <a asp-controller="Product" asp-action="DetileProduct" asp-route-ProductID="@item.ProductID">
+                                                <img src="/assets/Public/@item.ScrMain" alt="تصویر محصول">
+                                            </a>
+                                        </figure>
+
+                                        <h3 class="product-title">
+                                            <a asp-controller="Product" asp-action="DetileProduct" asp-route-ProductID="@item.ProductID">@item.Name</a>
+                                        </h3><!-- End .product-title -->
+                                    </div><!-- End .product -->
+                                </td>
+                                <td class="price-col">
+                                    @{
+                                        int Price = Convert.ToInt32(item.Price);
+                                    }
+                                    @Price.ToString("#,0") تومان
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <div>چیزی موجود نیست</div>
+                    }
+                </tbody>
+            </table><!-- End .table table-wishlist -->
+        </div><!-- End .container -->
+    </div><!-- End .page-content -->
+</main>

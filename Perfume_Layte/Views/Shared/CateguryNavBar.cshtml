@@ -1,0 +1,43 @@
+﻿@using PerfumeLayte.Application.Services.Product.Querises.GetCateguryList
+@model List<CateguryDto>
+
+<nav class="main-nav">
+    <ul class="menu sf-arrows sf-js-enabled" style="touch-action: pan-y;">
+        <li class="active">
+            <a href="/" class="sf-with-ul">خانه</a>
+        </li>
+        @if(Model.Any())
+        {
+            @foreach(var item in Model.Where(c => c.ParentCategoryId == null))
+            {
+                <li>
+                    <a asp-controller="Product" asp-action="Products" asp-route-CatID="@item.CateguryDtoID">@item.Name</a>
+
+                    @if(Model.Any(c => c.ParentCategoryId > 0))
+                    {
+                        <div class="megamenu megamenu-md" style="display: none;">
+                            <div class="row no-gutters">
+                                <div class="col-md-8">
+                                    <div class="menu-col">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <ul>
+                                                    @foreach (var itemDetile in Model.Where(c => c.ParentCategoryId == item.CateguryDtoID))
+                                                    {
+                                                        <li><a asp-controller="Product" asp-action="Products" asp-route-CatID="@itemDetile.CateguryDtoID">@itemDetile.Name</a></li>
+
+                                                    }
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </li>
+            }
+        }
+    </ul>
+</nav>

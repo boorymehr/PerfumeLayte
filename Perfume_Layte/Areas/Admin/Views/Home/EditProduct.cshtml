@@ -1,0 +1,118 @@
+﻿@using PerfumeLayte.Application.Services.Product.Querises.GetProductByID;
+@model GetProductByID
+@{
+    ViewData["Title"] = "ویرایش ";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+<form method="post" asp-area="Admin" asp-controller="Home" asp-action="EditProduct" enctype="multipart/form-data">
+    <div class="row">
+        <!-- Product Images -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img id="imgTagsChange" src="~/assets/Public/@Model.ScrMain" class="card-img-top" alt="Product Image">
+                <input id="ImgInpute" type="file" name="fileMain" />
+                <div class="card-body">
+                    <div class="row g-2">
+                        <div class="col-3">
+                            @foreach (var i in Model.src)
+                            {
+                                <img id="imgTagsChange" src="/assets/Public/@i" class="card-img-top" alt="Product Image">
+                                <input id="ImgInpute" type="file" name="Img" />
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <input asp-for="@Model.Name" class="h2 mb-3">نام محصول : <input type="text" name="Name" /></input>
+            <input asp-for="@Model.Brand" class="h2 mb-3">برند محصول : <input type="text" name="Brand" /></input>
+
+            <div class="mb-3">
+                <span class="h4 me-2">اف خور:</span>
+                <input asp-for="@Model.isTahkfif" type="checkbox" name="isTahkfif" />
+
+
+                <span class="h4 me-2">اف خور قیمت:</span>
+                <input asp-for="@Model.PriceNew" type="text" name="PriceNew" />
+
+
+            </div>
+
+            @*  <div class="mb-3">
+                <div class="d-flex align-items-center">
+                    <div class="text-warning me-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-muted">(128 reviews)</span>
+                </div>
+            </div> *@
+
+            <input asp-for="@Model.Price" class="h4 me-2">قیمت:<input name="Price" type="text" /></input>
+
+
+
+            <span>نمایش در صفحه </span>
+            <input asp-for="@Model.isVisite" type="checkbox" name="isVisite" />
+
+            <!-- Color Selection -->
+            <!-- Quantity -->
+ 
+
+            <!-- Actions -->
+            <!-- Additional Info -->
+            <div class="mt-4">
+                <p>توضیحات</p>
+                <textarea @Model.text id="text-editor" name="Text" rows="50" cols="50">@Model.text</textarea>
+            </div>
+
+            <br />
+            <br />  <br />  <br />
+
+            <p>ویژگی ها</p>
+            <textarea @Model.feature id="feature-editor" name="Feature" rows="50" cols="50">@Model.feature</textarea>
+        </div>
+
+
+
+
+
+    </div>
+
+    <button id="btnAddProduct" type="submit"></button>
+</form>
+@section Script {
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
+    <script>
+        new FroalaEditor('textarea#text-editor');
+        var editor = new FroalaEditor('#feature-editor');
+    </script>
+    <script>
+
+
+
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#imgTagsChange').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#ImgInpute").change(function() {
+            readURL(this);
+        });
+    </script>
+}

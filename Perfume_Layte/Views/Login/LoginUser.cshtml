@@ -1,0 +1,103 @@
+﻿@using PerfumeLayte.Application.Services.User.Querises.Login;
+@model SendFormUserLogin;
+@{
+    ViewData["Title"] = "ورود";
+}
+<nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">خانه</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ورود</li>
+        </ol>
+    </div>
+</nav>
+
+<div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17" style="background-image: url('~/assets/Public/Mens-Cologne-23-perfume.jpg')">
+    <div class="container">
+        <div class="form-box">
+            <div class="form-tab">
+                <ul class="nav nav-pills nav-fill" role="tablist">
+                    <li class="nav-item">
+                        ورود 
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="registers-2" role="tabpanel" aria-labelledby="register-tab-2">
+                        @if (ViewData["Success"] != null)
+                        {
+                            <div class="alert alert-success text-center">@ViewData["Success"].ToString()</div>
+                            <script>
+                                setInterval(()=>{
+                                    window.location.href = "/";
+                                },1500);
+                            </script>
+                        }
+                         @if (ViewData["isActive"] != null)
+                        {
+                            <div class="alert alert-warning text-center">@ViewData["isActive"].ToString()</div>
+                            <script>
+                                setInterval(()=>{
+                                    window.location.href = "/Login/SendSms?Mobile=@ViewData["MobileUser"]";
+                                },1500);
+                            </script>
+                        }
+                           @if (ViewData["none"] != null)
+                        {
+                            <div class="alert alert-danger text-center">@ViewData["none"].ToString()</div>
+                            <script>
+                                setInterval(()=>{
+                                    window.location.href = "/Login/LoginUser";
+                                },1500);
+                            </script>
+                        }
+                       
+                        <form asp-controller="Login" asp-action="LoginUser" method="post">
+                            <div class="form-group">
+                                <label asp-for="@Model.Mobile" for="register-email-2" ></label>
+                                <input asp-for="@Model.Mobile" class="form-control" id="register-email-2">
+                                <span asp-validation-for="@Model.Mobile" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="@Model.Password" for="register-password-2"></label>
+                                <input asp-for="@Model.Password" type="password" class="form-control" id="register-password-2">
+                                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-outline-primary-2">
+                                    <span>ورود</span>
+                                    <i class="icon-long-arrow-left"></i>
+                                </button>
+                                <div class="custom-control custom-checkbox">
+                                    <a class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" asp-action="Register" asp-controller="Register">  حساب کاربری ندارید؟</a>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input asp-for="@Model.isMembered" type="checkbox" class="custom-control-input" id="register-policy-2">
+                                    <label asp-for="@Model.isMembered" class="custom-control-label" for="register-policy-2">من با <a href="#">قوانین و مقررات</a> موافقم *</label>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+
+
+
+
+
+
+
+
+

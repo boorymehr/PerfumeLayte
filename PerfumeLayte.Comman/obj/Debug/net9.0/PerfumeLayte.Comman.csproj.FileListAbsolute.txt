@@ -1,0 +1,34 @@
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.deps.json
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.pdb
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.GeneratedMSBuildEditorConfig.editorconfig
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.AssemblyInfoInputs.cache
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.AssemblyInfo.cs
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.csproj.CoreCompileInputs.cache
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\refint\PerfumeLayte.Comman.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.pdb
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\ref\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.deps.json
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.pdb
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.AssemblyInfoInputs.cache
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.AssemblyInfo.cs
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\refint\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.pdb
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\ref\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.deps.json
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\bin\Debug\net9.0\PerfumeLayte.Comman.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.csproj.AssemblyReference.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.AssemblyInfoInputs.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.AssemblyInfo.cs
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\refint\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\PerfumeLayte.Comman.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Comman\obj\Debug\net9.0\ref\PerfumeLayte.Comman.dll

@@ -1,0 +1,215 @@
+﻿@using PerfumeLayte.Application.Services.Product.Querises.GetCateguryList
+@using PerfumeLayte.Application.Services.Product.Querises.GetProductListForSite;
+@model ResultProductForSiteDto;
+@{
+	ViewData["Title"] = "محصولات";
+
+
+	List<CateguryDto> Categurys = ViewData["ListCtegury"] as List<CateguryDto>;
+}
+<form asp-controller="Product" asp-action="Products" method="get" id="FormSend">
+	<main class="main">
+		<nav aria-label="breadcrumb" class="breadcrumb-nav mb-2">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="/">خانه</a></li>
+					<li class="breadcrumb-item"><a>@ViewData["Title"]</a></li>
+				</ol>
+			</div><!-- End .container -->
+		</nav><!-- End .breadcrumb-nav -->
+
+		<div class="page-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9">
+						<div class="toolbox">
+							<div class="toolbox-left">
+								<div class="toolbox-info">
+								</div>
+							</div>
+
+							<div class="toolbox-right">
+								<div class="toolbox-sort">
+									<label for="sortby">مرتب سازی براساس : </label>
+									<div class="select-custom">
+										<select name="Ordering" id="sortby" class="form-control">
+											<option value="popularity" selected="selected">بیشترین خرید</option>
+											<option value="date">تاریخ</option>
+										</select>
+									</div>
+								</div><!-- End .toolbox-sort -->
+
+							</div><!-- End .toolbox-right -->
+						</div><!-- End .toolbox -->
+
+						<div class="products mb-3">
+							<div class="row justify-content-center">
+
+								@foreach (var product in Model.Products)
+								{
+									<div class="col-6 col-md-4 col-lg-4">
+										<div class="product product-7 text-center">
+											<figure class="product-media">
+												<a asp-controller="Product" asp-action="DetileProduct" asp-route-ProductID="@product.Id">
+													<img src="/assets/Public/@product.ImageSrc" alt="تصویر محصول" class="product-image">
+												</a>
+
+												<div asp-controller="Product" asp-action="ProductToCart" asp-route-ProductID="@product.Id" asp-route-UserMobile="@User.Identity.Name" class="product-action-vertical">
+													<a href="#" class="btn-product-icon btn-wishlist btn-expandable">
+														<span>
+															افزودن
+															به لیست علاقه مندی
+														</span>
+													</a>
+												</div><!-- End .product-action-vertical -->
+
+												<div class="product-action">
+													<a asp-controller="Product" asp-action="AddToCart" asp-route-ProductID="@product.Id" asp-route-Mobile="@User.Identity.Name" class="btn-product btn-cart">
+														<span>
+															افزودن به
+															سبد خرید
+														</span>
+													</a>
+												</div><!-- End .product-action -->
+											</figure><!-- End .product-media -->
+
+											<div class="product-body">
+												<div class="product-cat text-center">
+													<a>dwa</a>
+												</div><!-- End .product-cat -->
+												<h3 class="product-title text-center">
+													<a href="product.html">
+														@product.Title
+													</a>
+												</h3><!-- End .product-title -->
+												<div class="product-price">
+													@product.Price.ToString("#,0");
+												</div>
+												<div class="ratings-container">
+													<div class="ratings">
+														<div class="ratings-val" style="width: 20%;">3</div>
+														<!-- End .ratings-val -->
+													</div><!-- End .ratings -->
+												</div><!-- End .rating-container -->
+											</div><!-- End .product-body -->
+										</div><!-- End .product -->
+									</div>
+								}
+
+							</div><!-- End .row -->
+						</div><!-- End .products -->
+						<nav aria-label="Page navigation">
+							<ul class="pagination justify-content-center">
+								<li class="page-item disabled">
+									<a class="page-link page-link-prev" aria-label="Previous" tabindex="-1" aria-disabled="true">
+										<span aria-hidden="true"><i class="icon-long-arrow-right"></i></span>قبلی
+									</a>
+								</li>
+								@for (var i = 1; i < Model.TotalRow; i++)
+								{
+									<li class="page-item">
+										<a class="page-link page-link-prev"  aria-label="Previous" tabindex="-1" aria-disabled="true">
+											@i
+										</a>
+									</li>
+									<li class="page-item"><a asp-controller="Product" asp-action="Products" asp-route-pageid="@i" class="page-link" >@i</a></li>
+								}
+								<li class="page-item">
+									<a class="page-link page-link-next" href="#" aria-label="Next">
+										بعدی <span aria-hidden="true"><i class="icon-long-arrow-left"></i></span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+							<ul>
+								<nav aria-label="Page navigation">
+									<ul class="pagination justify-content-center">
+							
+									</ul>
+								</nav>
+							</ul>
+						
+					</div><!-- End .col-lg-9 -->
+					<aside class="col-lg-3 order-lg-first">
+						<div class="sidebar sidebar-shop">
+							<div class="widget widget-clean">
+								<label>فیلترها : </label>
+								<a href="#" class="sidebar-filter-clear">پاک کردن همه</a>
+							</div><!-- End .widget widget-clean -->
+
+							<div class="widget widget-collapsible">
+								<h3 class="widget-title">
+									<a data-toggle="collapse" href="#widget-1" role="button" aria-expanded="true" aria-controls="widget-1">
+										دسته بندی
+									</a>
+								</h3>
+								<div class="collapse show" id="widget-1">
+									<div class="widget-body">
+										<div class="filter-items filter-items-count">
+											@foreach (var categury in Categurys)
+											{
+												<div class="filter-item">
+													<div class="custom-control custom-checkbox">
+														<input value="@categury.CateguryDtoID" name="CatID" type="checkbox" class="custom-control-input" id="CatID + @categury.CateguryDtoID">
+														<label class="custom-control-label" for="CatID + @categury.CateguryDtoID">@categury.Name</label>
+													</div>
+												</div>
+											}
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="widget widget-collapsible">
+								<h3 class="widget-title">
+									<a data-toggle="collapse" href="#widget-5" role="button" aria-expanded="true" aria-controls="widget-5">
+										قیمت
+									</a>
+								</h3><!-- End .widget-title -->
+
+								<div class="collapse show" id="widget-5">
+									<div class="widget-body">
+										<div class="filter-price">
+											<div class="filter-price-text">
+												محدوده قیمت :
+											</div><!-- End .filter-price-text -->
+												<input type="text" name="InPrice" />
+												<input type="text" name="ToPrice" />
+
+												<button id="PriceRange">اعمال قیمت </button>
+										</div><!-- End .filter-price -->
+									</div><!-- End .widget-body -->
+								</div><!-- End .collapse -->
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</main>
+</form>
+
+@section Scripts {
+<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const sortSelect = document.getElementById("sortby");
+		  const inPrice = document.getElementById("InPrice");
+		  const toPrice = document.getElementById("ToPrice");
+		  const checkboxes = document.querySelectorAll("input[name='CatID']");
+				  var PriceRange = document.querySelector("button#PriceRange");
+					  PriceRange.addEventListener("click",() => {
+							  sendForm();
+					  });
+
+		  function sendForm() {
+			var FormSend = document.getElementById("FormSend");
+			FormSend.submit();
+		  }
+
+		  // اضافه کردن event listener به فیلدها
+		  sortSelect.addEventListener('change', sendForm);
+		  checkboxes.forEach(chk => chk.addEventListener('change', sendForm));
+		});
+</script>
+
+        }

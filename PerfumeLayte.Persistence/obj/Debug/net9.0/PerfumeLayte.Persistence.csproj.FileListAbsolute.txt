@@ -1,0 +1,63 @@
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.deps.json
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.runtimeconfig.json
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.pdb
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Application.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Comman.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Domain.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Application.pdb
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Domain.pdb
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Comman.pdb
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.csproj.AssemblyReference.cache
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.AssemblyInfoInputs.cache
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.AssemblyInfo.cs
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.csproj.CoreCompileInputs.cache
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeL.05A0BE2F.Up2Date
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\refint\PerfumeLayte.Persistence.dll
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.pdb
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.genruntimeconfig.cache
+D:\boooooooory\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\ref\PerfumeLayte.Persistence.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.deps.json
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.runtimeconfig.json
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.pdb
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Application.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Domain.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Application.pdb
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Domain.pdb
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Comman.pdb
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.csproj.AssemblyReference.cache
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.AssemblyInfoInputs.cache
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.AssemblyInfo.cs
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeL.05A0BE2F.Up2Date
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\refint\PerfumeLayte.Persistence.dll
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.pdb
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.genruntimeconfig.cache
+C:\Users\M\Desktop\New folder\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\ref\PerfumeLayte.Persistence.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.deps.json
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.runtimeconfig.json
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Persistence.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Application.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Comman.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Domain.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Application.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Domain.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\bin\Debug\net9.0\PerfumeLayte.Comman.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.csproj.AssemblyReference.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.AssemblyInfoInputs.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.AssemblyInfo.cs
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeL.05A0BE2F.Up2Date
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\refint\PerfumeLayte.Persistence.dll
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.pdb
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\PerfumeLayte.Persistence.genruntimeconfig.cache
+C:\Users\M\Desktop\PerfumeLayte\PerfumeLayte.Persistence\obj\Debug\net9.0\ref\PerfumeLayte.Persistence.dll

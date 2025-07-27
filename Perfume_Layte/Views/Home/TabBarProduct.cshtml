@@ -1,0 +1,38 @@
+﻿@using PerfumeLayte.Application.Services.Product.Querises.GetListProduct;
+@model List<GetListProductDto>;
+@foreach(var Pro in Model)
+{
+    <div class="owl-item active" style="width: 353px; margin-left: 20px;height: 400px;">
+        <div class="product product-11 text-center">
+            <figure class="product-media">
+                <a asp-controller="Product" asp-action="DetileProduct" asp-route-ProductID="@Pro.ProductID">
+                    <img src="/assets/Public/@Pro.ScrMain" alt="تصویر محصول" class="product-image">
+                </a>
+                <div class="product-action-vertical">
+                    <a href="#" class="btn-product-icon btn-wishlist">
+                        <span>
+                            افزودن به
+                            لیست علاقه مندی
+                        </span>
+                    </a>
+                </div>
+            </figure>
+            <div class="product-body">
+                <h3 class="product-title text-center">
+                    <a href="product.html">
+                        @Pro.Name
+                    </a>
+                </h3>
+                <div class="product-price">
+                    @{
+                       int Price = Convert.ToInt32(Pro.Price);
+                    }
+                    @Price.ToString("#,0")
+                </div>
+            </div>
+            <div class="product-action">
+                <a asp-controller="Product" asp-action="AddToCart" asp-route-ProductID="@Pro.ProductID" asp-route-Mobile="@User.Identity.Name" class="btn-product btn-cart"><span>افزودن به سبد خرید</span></a>
+            </div>
+        </div>
+    </div>
+}
